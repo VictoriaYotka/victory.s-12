@@ -1,0 +1,356 @@
+.products__uppertitle,
+.products__title {
+  color: var(--secondary-text-color);
+}
+
+.products__list {
+  @extend %list;
+  gap: 168px;
+
+  margin-top: 148px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-top: 200px;
+  }
+
+  @include desktop {
+    gap: 29px;
+    margin-top: 303px;
+  }
+}
+
+.products__item {
+  position: relative;
+
+  flex-basis: 440px;
+
+  padding-top: 123px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  border-radius: 24px;
+
+  @include mobile {
+    padding-bottom: 64px;
+  }
+
+  @include tablet {
+    padding-top: 108px;
+    padding-left: 26px;
+    padding-right: 26px;
+
+    box-shadow: var(--product-field-shadow-medium);
+    border-radius: 16px;
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 2 * 29px) / 3);
+
+    padding-top: 165px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-bottom: 38px;
+
+    box-shadow: var(--product-field-shadow-large);
+    border-radius: 24px;
+  }
+
+  &:nth-child(2n) {
+    background: var(--product-bg-coffe);
+  }
+
+  &:nth-child(2n + 1) {
+    background: var(--product-bg-milkshakes);
+  }
+
+  &:first-child {
+    background: var(--product-bg-cream);
+  }
+}
+
+// PRODUCT IMAGES //
+
+.product__img {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: -108px;
+
+  display: flex;
+
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: translateY(11px);
+  }
+
+  @include tablet {
+    top: -120px;
+
+    &:hover,
+    &:focus {
+      transform: translateY(12px);
+    }
+  }
+
+  @include desktop {
+    left: calc(50% - 151px);
+    top: -183px;
+
+    height: 302px;
+    width: 302px;
+
+    &:hover,
+    &:focus {
+      transform: translateY(16px);
+    }
+  }
+}
+
+.img-1 {
+  background-image: url(../images/products/cream_md@1x.png);
+
+  @include retina {
+    background-image: url(../images/products/cream_md@2x.png);
+  }
+
+  @include desktop {
+    background-image: url(../images/products/cream_lg@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/cream_lg@2x.png);
+    }
+  }
+}
+
+.img-2 {
+  background-image: url(../images/products/coffee_md@1x.png);
+
+  @include retina {
+    background-image: url(../images/products/coffee_md@2x.png);
+  }
+
+  @include desktop {
+    background-image: url(../images/products/coffee_lg@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/coffee_lg@2x.png);
+    }
+  }
+}
+
+.img-3 {
+  background-image: url(../images/products/milkshakes_md@1x.png);
+
+  @include retina {
+    background-image: url(../images/products/milkshakes_md@2x.png);
+  }
+
+  @include desktop {
+    background-image: url(../images/products/milkshakes_lg@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/milkshakes_lg@2x.png);
+    }
+  }
+}
+
+// PRODUCT BG`S //
+
+.product__gradient {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: -97px;
+
+  display: flex;
+
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+  @include tablet {
+    top: -108px;
+  }
+
+  @include desktop {
+    left: calc(50% - 151px);
+    top: -167px;
+
+    height: 302px;
+    width: 302px;
+  }
+}
+
+.grad-1 {
+  background: var(--product-grad-cream);
+  box-shadow: var(--product-shadow-cream);
+}
+
+.grad-2 {
+  background: var(--product-grad-coffe);
+  box-shadow: var(--product-shadow-coffe);
+}
+
+.grad-3 {
+  background: var(--product-grad-milkshake);
+  box-shadow: var(--product-shadow-milkshake);
+}
+
+// PRODUCT DESCRIPTIONS //
+
+.product__name {
+  @extend %title;
+
+  margin-bottom: 40px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 22px;
+    line-height: 1.23;
+  }
+
+  @include desktop {
+    margin-bottom: 66px;
+
+    font-size: 30px;
+  }
+}
+
+.product__descr {
+  @extend %text;
+
+  min-height: 148px;
+  margin-bottom: 37px;
+
+  font-size: 14px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: var(--secondary-text-color);
+
+  @include mobile {
+    min-height: 74px;
+    margin-bottom: 47px;
+  }
+
+  @include tablet {
+    min-height: 175px;
+    margin-bottom: 37px;
+  }
+
+  @include desktop {
+    min-height: 142px;
+    margin-bottom: 28px;
+
+    font-size: 16px;
+  }
+}
+
+// PRODUCT BTN //
+
+.product__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  width: 160px;
+  height: 48px;
+
+  border: none;
+  background: transparent;
+
+  // cursor: pointer;
+
+  @include mobile {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  @include tablet {
+    height: 40px;
+  }
+
+  @include desktop {
+    width: 120px;
+    height: 60px;
+  }
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--main-text-color);
+  }
+}
+
+// anim
+
+.product__name,
+.product__descr,
+.products__uppertitle,
+.products__title {
+  position: relative;
+  top: 1.8rem;
+  opacity: 0;
+}
+
+.product__name._active,
+.products__uppertitle._active,
+.products__title._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.product__descr._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swift-up {
+  to {
+    top: 0rem;
+  }
+}
+
+.product__img,
+.grad-1,
+.grad-2,
+.grad-3 {
+  scale: (0);
+  transition: all 0.8s ease 0s;
+}
+
+.product__img._active,
+.grad-1._active,
+.grad-2._active,
+.grad-3._active {
+  scale: (1);
+}

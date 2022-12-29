@@ -1,0 +1,11 @@
+import './js/gallery-slider';
+import './js/anchor-scroll';
+import './js/mobile-menu';
+import './js/slick';
+import './js/text_appear';
+import './js/modal-buynow';
+import './js/modal-franchise';
+import './js/modal-ingredients';
+import './js/modal-location';
+import './js/modal-readmore';
+import './js/back-to-top';

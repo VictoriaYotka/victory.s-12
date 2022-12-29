@@ -1,0 +1,64 @@
+<!-- mobile menu -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <a href="./index.html" class="logo__menu"
+    ><svg class="logo__icon" width="48" height="44">
+      <use href="./images/icons.svg#logo"></use>
+    </svg>
+  </a>
+  <button class="menu-toggle menu--close js-close-menu">
+    <svg class="menu__icon--close" width="32" height="32">
+      <use href="./images/icons.svg#close-btn"></use>
+    </svg>
+  </button>
+
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a
+        href="#hero"
+        class="menu__link js-close-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        >Home</a
+      >
+    </li>
+    <li class="menu__item">
+      <a
+        href="#about"
+        class="menu__link js-close-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        >How it’s made?</a
+      >
+    </li>
+    <li class="menu__item">
+      <a
+        href="#products"
+        class="menu__link js-close-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        >Our products</a
+      >
+    </li>
+    <li class="menu__item">
+      <a
+        href="#contacts"
+        class="menu__link js-close-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        >Contact</a
+      >
+    </li>
+  </ul>
+  <button
+    type="button"
+    class="button menu__button js-close-menu js-open-modal"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    data-modal-open-mobile-menu
+  >
+    Buy now
+    <svg class="button__icon--arrow" width="12" height="12">
+      <use href="./images/icons.svg#arrow-btn"></use>
+    </svg>
+  </button>
+</div>

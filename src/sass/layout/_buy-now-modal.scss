@@ -1,0 +1,351 @@
+.modal-buy-now {
+  text-align: center;
+  max-height: 99%;
+
+  overflow-y: auto;
+
+  scrollbar-color: var(--primary-accent-color) var(--modal-bg-color);
+}
+
+.modal-buy-now::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  border-radius: 20px;
+  border: 3px solid var(--modal-bg-color);
+}
+
+.modal-buy-now::-webkit-scrollbar-thumb {
+  background-color: var(--primary-accent-color);
+  border-radius: 20px;
+}
+
+//Картки
+.buy-now__title {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+  margin-bottom: 40px;
+  @extend %title;
+}
+
+.buy-now__list {
+  padding-inline-start: 0;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    flex-basis: calc((100% - 2 * 32px) / 3);
+  }
+}
+.buy-now__item {
+  display: inline-block;
+  position: relative;
+  width: 132px;
+  height: 132px;
+  border-radius: 15px;
+  @extend %list;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.buy-now__card-1 {
+  border: 2px solid #96af8c;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 82px;
+  }
+}
+.buy-now__card-2 {
+  border: 2px solid #efd478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 82px;
+  }
+}
+.buy-now__card-3 {
+  border: 2px solid #d6936d;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+
+.buy-now__gradient {
+  @extend %cursor;
+
+  position: absolute;
+  top: -61px;
+  left: -2px;
+  display: flex;
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+
+  @include tablet {
+    left: -5px;
+  }
+}
+.card-gradient-1 {
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+.card-gradient-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+}
+
+.card-gradient-3 {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+.modal__form-checkbox {
+  appearance: none;
+}
+
+.buy-now__name {
+  @extend %cursor;
+
+  @extend %text;
+  position: relative;
+  top: -40px;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  user-select: none;
+}
+
+.buy-now__img {
+  @extend %cursor;
+
+  position: absolute;
+  top: -71px;
+  left: -2px;
+  display: flex;
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+
+  @include tablet {
+    left: -5px;
+  }
+}
+
+/* Стили для активных классов подложки и окна */
+.modal-buy-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__form-btn {
+  width: 121px;
+  height: 42px;
+  background: #f8d24e;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.buy-now__form {
+  @include tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.buy-now_wrap {
+  position: relative;
+  margin-bottom: 12px;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+}
+
+.buy-now_textarea {
+  position: relative;
+  margin-bottom: 24px;
+  height: 64px;
+
+  @include tablet {
+    margin-bottom: 32px;
+    height: 84px;
+  }
+}
+
+.buy-now_label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 14px;
+    left: 16px;
+  }
+}
+
+.buy-now_textarea .comments {
+  top: 17px;
+  left: 12px;
+
+  @include tablet {
+    top: 20px;
+    left: 16px;
+  }
+}
+
+.buy-now_field,
+.buy-now_field--tel,
+.buy-now_comment {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  width: 100%;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid var(--main-bg-color);
+  border-radius: 10px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+
+.buy-now_comment {
+  resize: none;
+}
+
+.buy-now_field:not(:placeholder-shown):required:invalid {
+  border: 3px solid var(--val-invalid);
+}
+
+.buy-now_field:not(:placeholder-shown):required:valid {
+  border: 3px solid var(--button-hover-color);
+}
+
+.buy-now_field:focus + .buy-now_label,
+.buy-now_field:not(:placeholder-shown) + .buy-now_label {
+  transform: translateY(-31px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-size: 10px;
+
+  @include tablet {
+    transform: translateY(-40px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-size: 12px;
+  }
+}
+
+.buy-now_comment:focus + .buy-now_label,
+.buy-now_comment:not(:placeholder-shown) + .buy-now_label {
+  transform: translateY(-31px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-size: 10px;
+
+  @include tablet {
+    transform: translateY(-38px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-size: 12px;
+  }
+}
+
+.modal__checkbox {
+  @extend %cursor;
+  width: 102%;
+  height: 102%;
+  border-radius: 15px;
+}
+.modal__checkbox:focus-within {
+  outline: none;
+}
+.modal__checkbox {
+  appearance: none;
+}
+.modal__checkbox-1:checked {
+  background-color: var(--product-bg-cream);
+}
+.modal__checkbox-2:checked {
+  background-color: var(--product-bg-coffe);
+}
+.modal__checkbox-3:checked {
+  background-color: var(--product-bg-milkshakes);
+}
+
+.img-1 {
+  background-image: url(../images/buy-naw-modal/img_small-cream@1x.png);
+
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-cream@2x.png);
+  }
+}
+.img-2 {
+  background-image: url(../images/buy-naw-modal/img_small-coffe@1x.png);
+
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-coffe@2x.png);
+  }
+}
+
+.img-3 {
+  background-image: url(../images/buy-naw-modal/img_small-milkshake@1x.png);
+
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-milkshake@2x.png);
+  }
+}

@@ -1,0 +1,129 @@
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #ffffff;
+  // cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 32px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu__icon--burger,
+.menu__icon--close {
+  fill: currentColor;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 64px;
+  background-color: #85a279;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  transform: translateX(120%);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    background-color: #97af8d;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+
+  @include tablet {
+    top: 32px;
+    right: 32px;
+    margin-right: 0;
+  }
+}
+
+.logo__menu {
+  position: absolute;
+  top: 12px;
+  left: 32px;
+  color: var(--primary-accent-color);
+
+  @include tablet {
+    top: 20px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.menu__list {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: auto;
+}
+
+.menu__link {
+  @extend %link;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.22;
+  color: var(--main-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: var(--button-text-color-second);
+}
+
+.menu__button {
+  min-width: 152px;
+  line-height: 1.21;
+  gap: 4px;
+  @include tablet {
+    display: none;
+  }
+}

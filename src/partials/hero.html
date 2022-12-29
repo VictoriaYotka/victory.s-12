@@ -1,0 +1,106 @@
+<section class="hero" id="hero">
+  <div class="container hero__container">
+    <div class="hero__wrapper--left">
+      <!-- <h1 class="hero__title _anim-items" id="home">
+        ice cream made with passion
+      </h1> -->
+      <h1 class="hero__title _anim-items" id="home">
+        <span class="animated"><i>ice</i></span>
+        <span class="animated"><i>cream</i></span>
+        <span class="animated"><i>made</i></span>
+        <span class="animated"><i>with</i></span>
+        <span class="animated"><i>passion</i></span>
+      </h1>
+      <div class="hero__buttons">
+        <a href="#products" class="button--transparent hero__button"
+          >Products</a
+        >
+        <a
+          href="#about"
+          class="button--transparent hero__button hero__button--underline"
+        >
+          How it’s made?
+        </a>
+      </div>
+      <div class="hero__description">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/img1_lg.png    1x,
+              ./images/hero/img1_lg@2x.png 2x
+            "
+            type="image/png"
+          />
+
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/img1_md.png    1x,
+              ./images/hero/img1_md@2x.png 2x
+            "
+            type="image/png"
+          />
+
+          <img
+            class="hero__image--left _anim-items"
+            src="./images/hero/img1_md.png"
+            width="152"
+            alt="ice-cream plate"
+            loading="lazy"
+          />
+        </picture>
+        <div class="description__wrapper">
+          <p class="description__text _anim-items">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <button class="description__arrow">
+            <svg class="description__arrow--icon" width="40" height="16">
+              <use href="./images/icons.svg#hero-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="./images/hero/img2_lg.png 1x, ./images/hero/img2_lg@2x.png 2x"
+        type="image/png"
+      />
+
+      <source
+        media="(min-width: 768px)"
+        srcset="./images/hero/img2_md.png 1x, ./images/hero/img2_md@2x.png 2x"
+        type="image/png"
+      />
+
+      <source
+        media="(max-width: 767.98px)"
+        srcset="./images/hero/img2_s.png 1x, ./images/hero/img2_s@2x.png 2x"
+        type="image/png"
+      />
+
+      <img
+        class="hero__img--right _anim-items"
+        src="./images/hero/img2_lg.png"
+        alt="ice-cream with face"
+        width="456"
+        height="560"
+        loading="lazy"
+      />
+    </picture>
+    <ul class="info__list">
+      <li class="info__item">
+        <p class="info__number">16</p>
+        <p class="info__text">cafes</p>
+      </li>
+      <li class="info__item">
+        <p class="info__number">23</p>
+        <p class="info__text">food trucks</p>
+      </li>
+    </ul>
+  </div>
+</section>
