@@ -2,10 +2,10 @@
   "name": "victory.s-twelve",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://VictoriaYotka.github.io/victory.s-twelve",
+  "homepage": "https://VictoriaYotka.github.io/victory.s-12",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /victory.s-twelve/"
+    "build": "parcel build src/*.html --public-url /victory.s-12/"
   },
   "repository": {
     "type": "git",
