@@ -272,15 +272,15 @@
   }
 }
 
-.cream {
+.cream:placeholder-shown {
   border: 1px solid var(--main-bg-color);
 }
 
-.coffee {
+.coffee:placeholder-shown {
   border: 1px solid var(--product-bg-coffe);
 }
 
-.milk {
+.milk:placeholder-shown {
   border: 1px solid var(--product-bg-milkshakes);
 }
 

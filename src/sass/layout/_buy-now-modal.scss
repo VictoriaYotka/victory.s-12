@@ -267,6 +267,10 @@
   resize: none;
 }
 
+.buy-now_field::placeholder-shown {
+  border: 1px solid var(--main-bg-color);
+}
+
 .buy-now_field:not(:placeholder-shown):required:invalid {
   border: 3px solid var(--val-invalid);
 }
