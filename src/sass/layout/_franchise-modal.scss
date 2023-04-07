@@ -139,18 +139,16 @@
   resize: none;
 }
 
-.franchise_field:placeholder-shown,
+.franchise_field:placeholder-shown:required,
 .franchise_comment:placeholder-shown {
   border: 1px solid var(--main-bg-color);
 }
 
-.franchise_field:not(:placeholder-shown):invalid,
-.franchise_comment:not(:placeholder-shown):invalid {
+.franchise_field:not(:placeholder-shown):required:invalid {
   border: 3px solid rgb(172, 48, 48);
 }
 
-.franchise_field:not(:placeholder-shown):valid,
-.franchise_comment:not(:placeholder-shown):valid {
+.franchise_field:not(:placeholder-shown):required:valid {
   border: 3px solid var(--button-hover-color);
 }
 

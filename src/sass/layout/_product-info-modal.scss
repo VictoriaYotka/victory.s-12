@@ -272,23 +272,23 @@
   }
 }
 
-.cream:placeholder-shown {
+.cream:placeholder-shown:required {
   border: 1px solid var(--main-bg-color);
 }
 
-.coffee:placeholder-shown {
+.coffee:placeholder-shown:required {
   border: 1px solid var(--product-bg-coffe);
 }
 
-.milk:placeholder-shown {
+.milk:placeholder-shown:required {
   border: 1px solid var(--product-bg-milkshakes);
 }
 
-.modal-product_field:not(:placeholder-shown):invalid {
+.modal-product_field:not(:placeholder-shown):required:invalid {
   border: 3px solid var(--val-invalid);
 }
 
-.modal-product_field:not(:placeholder-shown):valid {
+.modal-product_field:not(:placeholder-shown):required:valid {
   border: 3px solid var(--button-hover-color);
 }
 

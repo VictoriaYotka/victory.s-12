@@ -267,15 +267,15 @@
   resize: none;
 }
 
-.buy-now_field:placeholder-shown {
+.buy-now_field:placeholder-shown:required {
   border: 1px solid var(--main-bg-color);
 }
 
-.buy-now_field:not(:placeholder-shown):invalid {
+.buy-now_field:not(:placeholder-shown):required:invalid {
   border: 3px solid var(--val-invalid);
 }
 
-.buy-now_field:not(:placeholder-shown):valid {
+.buy-now_field:not(:placeholder-shown):required:valid {
   border: 3px solid var(--button-hover-color);
 }
 
