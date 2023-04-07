@@ -144,12 +144,12 @@
   border: 1px solid var(--main-bg-color);
 }
 
-.franchise_field:not(:placeholder-shown):required:invalid,
+.franchise_field:not(:placeholder-shown):invalid,
 .franchise_comment:not(:placeholder-shown):invalid {
   border: 3px solid rgb(172, 48, 48);
 }
 
-.franchise_field:not(:placeholder-shown):required:valid,
+.franchise_field:not(:placeholder-shown):valid,
 .franchise_comment:not(:placeholder-shown):valid {
   border: 3px solid var(--button-hover-color);
 }
